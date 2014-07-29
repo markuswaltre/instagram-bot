@@ -4,6 +4,10 @@ import socket
 import datetime
 import re
 
+a = [0,1]
+print a[0]
+print len(a)
+
 for x in range(0, 5):
     print "We're on time %d" % (x)
 print random.randint(1.5*60,5*60)
