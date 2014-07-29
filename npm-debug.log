@@ -1,0 +1,78 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'httplib2' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose cache add [ 'httplib2', null ]
+5 verbose cache add name=undefined spec="httplib2" args=["httplib2",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'httplib2',
+6 verbose parsed url   path: 'httplib2',
+6 verbose parsed url   href: 'httplib2' }
+7 silly lockFile adc66972-httplib2 httplib2
+8 verbose lock httplib2 /Users/markuswaltre/.npm/adc66972-httplib2.lock
+9 silly lockFile adc66972-httplib2 httplib2
+10 silly lockFile adc66972-httplib2 httplib2
+11 verbose addNamed [ 'httplib2', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile b2c8ddbf-httplib2 httplib2@
+14 verbose lock httplib2@ /Users/markuswaltre/.npm/b2c8ddbf-httplib2.lock
+15 silly addNameRange { name: 'httplib2', range: '*', hasData: false }
+16 verbose url raw httplib2
+17 verbose url resolving [ 'https://registry.npmjs.org/', './httplib2' ]
+18 verbose url resolved https://registry.npmjs.org/httplib2
+19 info trying registry request attempt 1 at 21:30:16
+20 http GET https://registry.npmjs.org/httplib2
+21 http 404 https://registry.npmjs.org/httplib2
+22 verbose headers { date: 'Wed, 23 Jul 2014 19:30:16 GMT',
+22 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 verbose headers   'content-type': 'application/json',
+22 verbose headers   'cache-control': 'max-age=0',
+22 verbose headers   'content-length': '52',
+22 verbose headers   'accept-ranges': 'bytes',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   age: '0',
+22 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+22 verbose headers   'x-cache': 'MISS',
+22 verbose headers   'x-cache-hits': '0',
+22 verbose headers   'x-timer': 'S1406143816.790436,VS0,VE100',
+22 verbose headers   'keep-alive': 'timeout=10, max=50',
+22 verbose headers   connection: 'Keep-Alive' }
+23 silly registry.get cb [ 404,
+23 silly registry.get   { date: 'Wed, 23 Jul 2014 19:30:16 GMT',
+23 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=0',
+23 silly registry.get     'content-length': '52',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '0',
+23 silly registry.get     'x-served-by': 'cache-fra1235-FRA',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1406143816.790436,VS0,VE100',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 silly lockFile b2c8ddbf-httplib2 httplib2@
+25 silly lockFile b2c8ddbf-httplib2 httplib2@
+26 error 404 404 Not Found: httplib2
+26 error 404
+26 error 404 'httplib2' is not in the npm registry.
+26 error 404 You should bug the author to publish it
+26 error 404
+26 error 404 Note that you can also install from a
+26 error 404 tarball, folder, or http url, or git url.
+27 error System Darwin 13.2.0
+28 error command "node" "/usr/local/bin/npm" "install" "httplib2"
+29 error cwd /Users/markuswaltre/Downloads/python-instagram-master
+30 error node -v v0.10.29
+31 error npm -v 1.4.14
+32 error code E404
+33 verbose exit [ 1, true ]
