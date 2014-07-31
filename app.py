@@ -3,7 +3,7 @@
 ##
 
 from instagram.client import InstagramAPI
-import socket
+#import socket
 import time
 import random
 import datetime
@@ -11,8 +11,8 @@ import re
 
 output = open('log.txt', 'ab+')
 
-ip_address = socket.gethostbyname(socket.gethostname())
-ip_address = socket.gethostbyname(socket.getfqdn())
+#ip_address = socket.gethostbyname(socket.gethostname())
+#ip_address = socket.gethostbyname(socket.getfqdn())
 ip_address = '80.203.71.193' # the above one doesn't return the correct ip
 
 tag_name = 'follow4follow'
@@ -25,7 +25,7 @@ class Access:
 
 a = [ 
 		Access(	#pythonplayarea
-				"1432579593.1d71bb6.e407d5ce5f4b4cc68ad3852efc9717df",
+				"1432579593.1d71bb6.92708473c417460a93184f3bac9adea1",
 			 	"c02f82afd80e4a12bb5b68b6c97775a6",
 			 	 "1d71bb656bb4442ba099230aae9a5d2a"
 			 ),		
@@ -35,7 +35,7 @@ a = [
 		# 	 	"36cd1d42cbeb4854ab63e56ad8236294"
 		# 	 ),
 		Access(	#fashionismypassion
-				"1432579593.2a43e88.da8360be53dc4fd1908fcd8787ff749f",
+				"1432579593.2a43e88.d3aa26c20bc64ccfb396ea5447862a18",
 			 	"8e182224c5ff4ff3ac5b7c8659b047c3",
 			 	"2a43e88c2e574c42bcfe77aa26bd2ee5"
 			 )
@@ -53,7 +53,7 @@ print ''
 def initAPI(c):
 	return InstagramAPI(access_token=a[c].token, client_ips=ip_address, client_secret=a[c].secret, client_id=a[c].id)
 
-api = initAPI(tok_count)
+api = initAPI(0)
 for x in range(0, 5):
 	recent_media, next = api.tag_recent_media(count=10, tag_name=tag_name)
 	# recent media by tag
@@ -70,17 +70,17 @@ for x in range(0, 5):
 					tok_count = 0
 
 				print '429 found, switching token to number %s' % (tok_count)
-				api = initAPI(tok_count)
+				#api = initAPI(tok_count)
 				# s = random.randint(25*60, 60*60) # 25:60 min sleep
 				# print 'Sleeping for %s min' % (s/60)
 				# time.sleep(s)
 		else:
 			output.write('%s, %s \n' % (media.user.id, media.user.username))
 			print 'Followed %s' % (media.user.username)
-			#time.sleep(random.randint(0,2)) # random 0:9 sek
+			time.sleep(random.randint(0,4)) # random 0:9 sek
 			print 'Liked media id %s' % (media.user.id)
 			count+=1
-			#time.sleep(random.randint(3,4)) # 1:5 min ~ 3min - 1/3 velocity
+			time.sleep(random.randint(30,90)) # 1:5 min ~ 3min - 1/3 velocity
 
 end_time = time.time()
 output.close()
